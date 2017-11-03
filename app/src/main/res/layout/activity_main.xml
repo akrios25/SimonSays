@@ -24,6 +24,7 @@
         android:background="@drawable/buttonshape"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:backgroundTint="@color/yellow"
         android:text="Yellow"
         />
     <Button
@@ -40,7 +41,7 @@
         android:layout_height="100dp"
         android:gravity="center"
         android:text="Start"
-        android:layout_above="@+id/green"
+        android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/blue" />
     <Button
         android:layout_width="150dp"
@@ -60,6 +61,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="14dp"
         android:layout_alignParentEnd="true" />
+
 
 
 

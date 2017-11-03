@@ -9,34 +9,60 @@
     android:orientation="horizontal"
     tools:context="nyc.c4q.simonsays.MainActivity">
 
-
+    <TextView
+        android:text="Simon"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_below="@+id/button_Y"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
     <Button
         android:id="@+id/button_Y"
+        android:background="@drawable/buttonshape"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:backgroundTint="@color/yellow"
         android:text="Yellow"
         />
     <Button
+        android:id="@+id/red"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:background="#ff0000"
         android:text="Red"/>
+    <Button
+        android:id="@+id/begin"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="Start"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/blue" />
     <Button
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="Blue"
+        android:background="@color/blue"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="14dp"
-        android:id="@+id/button3" />
+        android:id="@+id/blue" />
     <Button
+        android:id="@+id/green"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="Green"
+        android:background="@color/green"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="14dp"
         android:layout_alignParentEnd="true" />
+
+
 
 
 

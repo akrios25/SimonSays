@@ -75,7 +75,7 @@ public class SimonSaysPresenter {
         }
     }
 
-    private void startNewGame() {
+    private void startNewGame() {//created new methods
 
     }
 }

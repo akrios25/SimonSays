@@ -73,7 +73,7 @@ public class SimonSaysPresenter {
                 }
 
                 // User got through all the colors, advance to next level
-                if (simonSaysColorsStack.isEmpty()) {
+                if (simonSaysColorsStack.isEmpty()) {//made this change.
                     goToNextRound();
                 }
             }

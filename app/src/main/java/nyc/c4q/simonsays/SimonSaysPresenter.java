@@ -1,8 +1,10 @@
 package nyc.c4q.simonsays;
 
 import android.support.annotation.Nullable;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.Random;
 import java.util.Stack;
 
@@ -14,6 +16,7 @@ public class SimonSaysPresenter {
     private ArrayList<SimonSaysColors> simonColors = new ArrayList<>();
     private Stack<SimonSaysColors> simonSaysColorsStack = new Stack<>();
     private Random r = new Random();
+    private TextView rounds;
     private @Nullable
     SimonSaysPresentation presentation;
     private int roundNumber = 0;
@@ -50,6 +53,7 @@ public class SimonSaysPresenter {
         }
     }
 
+
     public void onColorsShown() {
         this.listeningToUserInput = true;
         simonSaysColorsStack.clear();
@@ -63,17 +67,20 @@ public class SimonSaysPresenter {
     public void onColorClicked(SimonSaysColors userColor) {
         if (presentation != null && listeningToUserInput) {
             SimonSaysColors simonColor = simonSaysColorsStack.pop();
-            if (simonColor != userColor) {
-                presentation.loseGame();
-                startNewGame();
+                if (simonColor != userColor) {
+                    presentation.loseGame();
+                    startNewGame();
+                }
+
+                // User got through all the colors, advance to next level
+                if (simonSaysColorsStack.isEmpty()) {
+                    goToNextRound();
+                }
             }
 
-            // User got through all the colors, advance to next level
-            if (simonSaysColorsStack.empty()) {
-                goToNextRound();
             }
-        }
-    }
+
+
 
     private void startNewGame() {//created new methods
 
